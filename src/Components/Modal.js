@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {registerUser, loginUser} from '../redux/action/authActions'
+import {registerUser, loginUser, logout} from '../redux/action/authActions'
 
 function Modal(props) {
 
@@ -11,11 +11,15 @@ function Modal(props) {
     const loginUser=()=> {
         props.loginUser('dmn@gmail.com', '123456')
     }
+    const logoutUser=()=> {
+        props.logout()
+    }
     
   return (
     <div>
         <button onClick={signupUser}>Sign up</button>
         <button onClick={loginUser}>Sign in</button>
+        <button onClick={logoutUser}>Logout</button>
     </div>
   )
 }
@@ -27,7 +31,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => (
     bindActionCreators({
         registerUser,
-        loginUser
+        loginUser,
+        logout
     }, dispatch)
 );
   

@@ -23,7 +23,12 @@ export const registerUser = (email, password, name, dept) => async (dispatch) =>
             const data = {
                 name,
                 email,
-                dept
+                dept,
+                roles:{
+                    member: true,
+                    club_admin: false,
+                    super_admin: false
+                }
             }
             const uid = res.user.uid
             try{
