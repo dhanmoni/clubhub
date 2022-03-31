@@ -1,5 +1,27 @@
 
-
+.SignInContainer{
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #72b5f8;
+}
+.SignInForm{
+  
+  width: 30%;
+  height: 500px;
+  box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  background-color:white;
+  border-radius:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
 input{
 
   
@@ -13,7 +35,7 @@ input{
 }
 
 .form-submit-button {
-  background-color: #80ff80;
+  background-color:#5c7add;
   border-bottom: 0;
   border-radius:10px;
   color:#ffffff;
@@ -62,6 +84,7 @@ border-radius: 10px;
   border-radius: 10px;
   display:flex;
   justify-content: center;
+  position: relative;
          }
 .ScreenCard{
   width: 90%;

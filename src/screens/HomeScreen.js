@@ -5,8 +5,8 @@ import PostsScreen from '../components/PostsScreen';
 const HomeScreen = (props) => {
     return (
         <div className="grid-container">
-            <NavigationPanel/>
-            <PostsScreen/>
+            <React.Fragment><NavigationPanel/>
+            <PostsScreen/></React.Fragment>
             
         </div>
     );

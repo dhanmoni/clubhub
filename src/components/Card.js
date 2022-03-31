@@ -3,8 +3,7 @@
 import React from 'react'
 
 export default function Card(props) {
-  return (
-    <>
+  return (<>
        <img  className='group-icon'src={require("../assets/codingclub.png")}></img> {/*replace with group icon url*/}
        <div className='ScreenCardContainer'>
           <div>
