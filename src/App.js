@@ -5,11 +5,8 @@ import {
   Route,
 } from "react-router-dom";
 import { Provider } from 'react-redux';
-import Modal from './Components/Modal';
 import {store, persistor} from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
-import PostModal from './Components/PostModal';
-
 import Landing from './Pages/Landing';
 import HomeScreen from './Pages/HomeScreen';
 import AdminScreen from './Pages/AdminScreen';
@@ -27,7 +24,15 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />}></Route>
-          <Route path="home" element={<HomeScreen />}></Route>
+          <Route
+            exact
+            path="home"
+            element={
+              <PrivateRoute>
+                <HomeScreen />
+              </PrivateRoute>
+            }
+          />
           <Route
             exact
             path="admin"
