@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import {
   BrowserRouter,
@@ -15,9 +16,11 @@ import ClubAdminRoute from './Components/ClubAdminRoute';
 import SuperAdminRoute from './Components/SuperAdminRoute';
 import PostScreen from './Pages/PostScreen';
 
+
 const App = () => {
   
   return (
+
     <Provider store={store}>
       <PersistGate persistor={persistor}>
 
@@ -56,6 +59,7 @@ const App = () => {
       </BrowserRouter>
       </PersistGate>
     </Provider>
+
   );
 };
 
