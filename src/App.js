@@ -1,6 +1,6 @@
 
 import './App.css';
-import Header from './screens/Header';
+import Header from './screens/header';
 import HomeScreen from './screens/HomeScreen';
 import Footer from './components/Footer';
 
