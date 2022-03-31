@@ -41,17 +41,16 @@ export const addPost = (postData) => dispatch  => {
     // First check if the author is the admin of the club-
     const clubRef = collection(firestoreDB, 'Clubs')
 
-    const q = query(clubRef, where("clubName", "==", postData.club));
+    const q = query(clubRef, where("clubAdmin", "==", postData.author));
     getDocs(q).then(snapshot => {
         snapshot.docs.forEach(doc=> {
-           if(doc.data().clubAdmin != postData.author) {
-                console.log('You are not admin to post!')
-           } else {
+            if(doc.exists()){
+                console.log(doc.data())
            // if the user is the admin then add the post!
                 const postRef = collection(firestoreDB, 'Posts')
                 addDoc(postRef, {
                     postText: postData.text,
-                    postClub: postData.club,
+                    postClub: doc.data().clubName,
                     postAuthor: postData.author
                 }).then(()=>
                         dispatch({
@@ -61,8 +60,10 @@ export const addPost = (postData) => dispatch  => {
                         dispatch({
                             type: SET_ERROR
                         })
-                    })
-           }
+                })
+            } else {
+                alert('You are not the admin')
+            }
         })
     })
 

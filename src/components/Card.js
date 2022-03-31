@@ -1,17 +1,19 @@
 
 //post card
 import React from 'react'
+import {MdGroup} from 'react-icons/md'
 
 export default function Card(props) {
+  console.log(props)
   return (
     <>
-       <img  className='group-icon'src={require("../assets/codingclub.png")}></img> {/*replace with group icon url*/}
+      <MdGroup className='group-icon'/>
        <div className='ScreenCardContainer'>
           <div>
-          <p className='ScreenCardContainerLabel'>Assam Engineering College Coding Club</p> {/*replace with group name*/}
-          <p className='ScreenCardContainerDescription'>Coding Club</p> {/*replace with group description*/}
+            <p className='ScreenCardContainerLabel'>{props.post.postClub}</p> {/*replace with group name*/}
+            <p className='ScreenCardContainerDescription'>{props.post.postText}</p> {/*replace with group description*/}
           </div>
-          </div>
-          </>
+        </div>
+    </>
   )
 }
