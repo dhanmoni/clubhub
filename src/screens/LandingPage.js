@@ -15,8 +15,6 @@ function LandingPage() {
             <button>Sign In</button>
             <button>Sign Out</button>
             </div>
-           
-
             <h3>We bring in all the clubs of your college together</h3>
             <Link to="/" className="developers">
               Know More about the developers
