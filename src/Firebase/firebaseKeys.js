@@ -1,0 +1,7 @@
+export const API_KEY = "AIzaSyBmuRsytVmcHxD_KMZ4aF3lKdS0YPAvSqM"
+export const AUTH_DOMAIN = "quizzy-abe62.firebaseapp.com"
+export const PROJECT_ID = "quizzy-abe62"
+export const STORAGE_BUCKET = "quizzy-abe62.appspot.com"
+export const MESSAGING_SENDER_ID = "304824831485"
+export const APP_ID = "1:304824831485:web:b4e5cc5897e69ba9c81d94"
+export const MEASUREMENT_ID =  "G-2MHWH8QJ0S"

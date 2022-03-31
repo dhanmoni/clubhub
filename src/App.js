@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
 
-function App() {
+import { Provider } from 'react-redux';
+import Modal from './Components/Modal';
+import {store, persistor} from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react'
+
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+
+      <div>
+        <p>Hello</p>
+        <Modal/>
+      </div>
+      </PersistGate>
+    </Provider>
   );
-}
+};
 
 export default App;
