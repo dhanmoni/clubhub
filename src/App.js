@@ -1,18 +1,20 @@
-
+import logo from './logo.svg';
 import './App.css';
-import Header from './screens/header';
+import LandingPage from './screens/LandingPage';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import HomeScreen from './screens/HomeScreen';
-import Footer from './components/Footer';
 
 
 function App() {
   return (
-   <div>
-      <Header/>
-        <HomeScreen/>
-        <Footer/>
-   </div>
-    
+    <div className="App">
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<LandingPage/>} />
+        <Route path="/homescreen" exact element={<HomeScreen/>} />
+      </Routes>
+    </Router>
+    </div>
   );
 }
 
