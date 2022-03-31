@@ -7,8 +7,8 @@ import {addPost, getAllPosts} from '../redux/action/postActions'
 function PostModal(props) {
 
     const postData = {
-        text: "Hello welcome to AEC",
-        club: 'AEC coding club',
+        text: "Hello welcome to AEC coding club ",
+        club: 'AEC Coding Club',
         author: props.auth.user
     }
 

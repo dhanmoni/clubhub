@@ -7,7 +7,7 @@ import {
 
 import { firestoreDB} from '../../Firebase/firebaseConfig'
 
-import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore'
+import { addDoc, collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 export const getAllPosts = () => dispatch  => {
     console.log("get post called!!")
@@ -38,28 +38,34 @@ export const getAllPosts = () => dispatch  => {
 
 export const addPost = (postData) => dispatch  => {
     console.log("add post called!!")
-    // call firebase api and add post
-    // dispatch the addPost action and pass response to get stored in redux
+    // First check if the author is the admin of the club-
+    const clubRef = collection(firestoreDB, 'Clubs')
 
-    // call firebase api and retrieve posts
-    // dispatch the getPost action and pass response to get stored in redux
-    const colRef = collection(firestoreDB, 'Posts')
-
-    addDoc(colRef, {
-        postText: postData.text,
-        postClub: postData.club,
-        postAuthor: postData.author
-    })
-        .then(()=>
-            dispatch({
-                type: ADD_POST
-            }
-            )
-        )
-        .catch(()=> {
-            dispatch({
-                type: SET_ERROR
-            })
+    const q = query(clubRef, where("clubName", "==", postData.club));
+    getDocs(q).then(snapshot => {
+        snapshot.docs.forEach(doc=> {
+           if(doc.data().clubAdmin != postData.author) {
+                console.log('You are not admin to post!')
+           } else {
+           // if the user is the admin then add the post!
+                const postRef = collection(firestoreDB, 'Posts')
+                addDoc(postRef, {
+                    postText: postData.text,
+                    postClub: postData.club,
+                    postAuthor: postData.author
+                }).then(()=>
+                        dispatch({
+                            type: ADD_POST
+                        }))
+                    .catch(()=> {
+                        dispatch({
+                            type: SET_ERROR
+                        })
+                    })
+           }
         })
+    })
+
+    
 }
 

@@ -6,10 +6,10 @@ import {registerUser, loginUser, logout} from '../redux/action/authActions'
 function Modal(props) {
 
     const signupUser=()=> {
-        props.registerUser('dmn@gmail.com', '123456', 'Dhanmoni', 'MCA')
+        props.registerUser('dhanmoni@gmail.com', '123456', 'Dhanmoni Nath', 'MCA')
     }
     const loginUser=()=> {
-        props.loginUser('dmn@gmail.com', '123456')
+        props.loginUser('dhanmoni@gmail.com', '123456')
     }
     const logoutUser=()=> {
         props.logout()

@@ -7,7 +7,7 @@ import {
 import { Provider } from 'react-redux';
 import {store, persistor} from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
-import Landing from './Pages/Landing';
+import LandingPage from './Pages/LandingPage';
 import HomeScreen from './Pages/HomeScreen';
 import AdminScreen from './Pages/AdminScreen';
 import PrivateRoute from './Components/PrivateRoute';
@@ -23,7 +23,7 @@ const App = () => {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />}></Route>
+          <Route path="/" element={<LandingPage />}></Route>
           <Route
             exact
             path="home"
