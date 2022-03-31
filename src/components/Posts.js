@@ -1,5 +1,7 @@
-import {React,useState} from 'react';
 
+
+//user posts screen
+import {React,useState} from 'react';
 const Posts = (props) => {
     const [description,setDescription]=useState('');
     return (
