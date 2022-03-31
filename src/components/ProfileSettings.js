@@ -2,9 +2,11 @@ import React from 'react';
 
 const Profilesettings = () => {
     return (
-        <div>
-            
-        </div>
+    <div>
+     <form>
+    
+    </form>
+    </div>
     );
 }
 

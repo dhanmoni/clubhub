@@ -1,12 +1,16 @@
 import React from 'react'
+import UserPosts from './Posts';
+import GroupPosts from './GroupPosts';
+import Card from './Card';
 
-export default function PostsScreen() {
+export default function PostsScreen(props) {
   return (
-    <div className="postScreen">
-        <div className='postScreenCard'>
-       <img  className='group-icon'src={require("../assets/codingclub.png")}></img> {/*replace with group icon url*/}
-       
-        </div>
+    <div className="PostScreen">
+        <div className="ScreenCard"> <GroupPosts /> </div>
+        
+    
+        
+  
     </div>
   )
 }

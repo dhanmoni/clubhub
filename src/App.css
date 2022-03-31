@@ -1,4 +1,26 @@
 
+
+input{
+
+  
+  height:50px;
+  width:70%;
+  border-color: #72b5f8;
+  border-top: 0;
+  border-left:0;
+  border-right:0;
+
+}
+
+.form-submit-button {
+  background-color: #80ff80;
+  border-bottom: 0;
+  border-radius:10px;
+  color:#ffffff;
+  font-weight:500;
+}
+
+
 .header {
   padding: 10px;
   text-align: center;
@@ -35,15 +57,15 @@ border-radius: 10px;
 
 
 }
-.postScreen{ 
+.PostScreen{ 
   grid-area: postScreen;
   border-radius: 10px;
   display:flex;
   justify-content: center;
          }
-.postScreenCard{
+.ScreenCard{
   width: 90%;
-  height: 150px;
+  height: 180px;
   background-color: aliceblue;
   
   border-radius: 10px;
@@ -51,13 +73,37 @@ border-radius: 10px;
   justify-content:flex-start;
   align-items: center;
   padding-left:40px;
-  box-shadow: -1px 1px 32px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -1px 1px 32px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 1px 32px 0px rgba(0,0,0,0.75);
+  padding-right:40px;
+  box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
         }
-.postScreenCardDescription{
+.ScreenCardDescription{
   justify-content:flex;
   flex-direction: flex-start;
+}
+.ScreenCardContainer{
+  display: inline-block;
+  width: 100%;
+  border-right:2px;
+  border: 2px solid #808080;
+  border-radius: 10px;
+  border-top:0;
+  border-right:0;
+  border-bottom:0;
+}
+.ScreenCardContainerLabel{
+  font-size:25px;
+  text-align:left;
+  padding-left: 20px;
+  padding-bottom: 1px;
+ 
+
+}
+.ScreenCardContainerDescription{
+  font-size:12px;
+  text-align:left;
+  padding-left: 20px;
 }
 
 .grid-container {
@@ -76,7 +122,6 @@ border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
 }
 .logo-main
 {
@@ -126,5 +171,43 @@ border-radius: 10px;
 
   height:80px;
   width: 80px;
+
+}
+.posts-container {
+  height:80%;
+  background-color:white;
+  
+  border-radius: 10px;
+  box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  width:80%;
+  
+}
+form{
+  padding:20px;
+}
+.ScreenCardContainerActions{
+  padding:5px;
+  width:100%;
+  display:inline;
+  margin: 10px 10px 10px 10px;
+
+}
+.ActionLike{
+ text-align:center;
+ height:40px;
+ color:white;
+ background-color: green;
+ border:0;
+ border-radius: 4px;
+}
+.ActionComment{
+  text-align:center;
+ height:40px;
+ color:white;
+ background-color: green;
+ border:0;
+ border-radius: 4px;
 
 }
