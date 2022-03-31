@@ -1,6 +1,5 @@
 import React from 'react'
 import Vector from "../assets/vector.png";
-import Vector1 from "../assets/LandingHeroBg.png";
 import { Link } from 'react-router-dom';
 
 function LandingPage() {
