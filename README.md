@@ -1,6 +1,6 @@
-# CLubHub
+# ClubHub
 
-An open source software for students and colleges to view and manage clubs and posts
+An open source software for students and colleges to view and manage clubs and posts all in one place!
 
 ## Website
 
