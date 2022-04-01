@@ -4,7 +4,6 @@ import {bindActionCreators} from 'redux'
 import {getAllPosts} from '../redux/action/postActions'
 import Card from './Card';
 
-
 const PostsScreen =(props)=> {
   useEffect(()=> {
     props.getAllPosts()

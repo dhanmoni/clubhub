@@ -2,12 +2,11 @@
 import {React,useState} from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {addPost} from '../redux/action/postActions'
-
 import '../App.css'
+
 const PostScreen = (props) => {
     const [description,setDescription]=useState('');
 

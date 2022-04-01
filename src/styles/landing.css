@@ -1,0 +1,36 @@
+.welcomeText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcomeTitle {
+    font-size: 26px;
+    color: #fff;
+  }
+
+  
+.SignInContainer{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #72b5f8;
+  }
+  .SignInForm{
+  
+    width: 30%;
+    height: auto;
+    box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+    background-color:white;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
