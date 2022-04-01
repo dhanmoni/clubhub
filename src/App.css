@@ -18,7 +18,6 @@ input{
 
 
 .header {
-  padding: 10px;
   text-align: center;
   background: #5c7add;
   color: white;
@@ -30,20 +29,31 @@ input{
 
 }
  .logo {
-    height:100px;
-    width: 100px;
+    height:70px;
+    width: 70px;
 }
 .group-icon{
-  height:100px;
+    height:100px;
     width: 100px;
     border-radius: 50%;
     object-fit: cover;
 }
 
+.welcomeText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.welcomeTitle {
+  font-size: 26px;
+  color: #fff;
+}
+
 
 .navigation-panel { 
 grid-area: navigation-panel;
-height:100vh;
+height:auto;
 display:flex;
 flex-direction: column;
 align-items: center;
@@ -60,7 +70,7 @@ border-radius: 10px;
 
 }
 .ScreenCard{
-  width: 90%;
+  width: 70%;
   margin: 10px auto;
   background-color: aliceblue;
   border-radius: 10px;
@@ -69,9 +79,9 @@ border-radius: 10px;
   align-items: center;
   padding-left:40px;
   padding-right:40px;
-  box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 3px 20px -8px rgba(69,67,69,1);
+-moz-box-shadow: 3px 3px 20px -8px rgba(69,67,69,1);
+box-shadow: 3px 3px 20px -8px rgba(69,67,69,1);
 }
 .ScreenCardDescription{
   justify-content:flex;
@@ -79,7 +89,8 @@ border-radius: 10px;
 }
 .ScreenCardContainer{
   display: inline-block;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   border-right:2px;
   border: 2px solid #808080;
   border-radius: 10px;
@@ -88,11 +99,10 @@ border-radius: 10px;
   border-bottom:0;
 }
 .ScreenCardContainerLabel{
-  font-size:25px;
+  font-size:22px;
   text-align:left;
   padding-left: 20px;
-  padding-bottom: 1px;
- 
+  font-weight: 600;
 
 }
 .ScreenCardContainerDescription{
@@ -150,13 +160,13 @@ border-radius: 10px;
   border-radius: 50%;
   object-fit: cover;
   background-color: white;
-  box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 3px 20px -8px rgba(69,67,69,1);
+-moz-box-shadow: 3px 3px 20px -8px rgba(69,67,69,1);
+box-shadow: 3px 3px 20px -8px rgba(69,67,69,1);
 }
 .footer{
 
-  width: 100vw;
+  width: 100%;
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -176,12 +186,13 @@ border-radius: 10px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 16px;
   margin: 20px 2px;
   cursor: pointer;
-  width: 60%;
+  width: 80%;
   border-radius: 10px;
-  height:40px;
+  height:auto;
 }
 .icons {
   height:40px;
@@ -194,14 +205,14 @@ border-radius: 10px;
 
 }
 .posts-container {
-  height:80%;
+  height:auto;
   background-color:white;
   margin: 50px auto;
   border-radius: 10px;
   box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
   -webkit-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 1px 32px -13px rgba(0,0,0,0.75);
-  width:80%;
+  width:60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,28 +225,4 @@ form{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.ScreenCardContainerActions{
-  padding:5px;
-  width:100%;
-  display:inline;
-  margin: 10px 10px 10px 10px;
-
-}
-.ActionLike{
- text-align:center;
- height:40px;
- color:white;
- background-color: #5c7add;
- border:0;
- border-radius: 4px;
-}
-.ActionComment{
-  text-align:center;
- height:40px;
- color:white;
- background-color: #5c7add;
- border:0;
- border-radius: 4px;
-
 }

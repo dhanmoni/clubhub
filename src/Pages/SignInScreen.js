@@ -41,8 +41,13 @@ const SignIn = (props)=> {
   return (<>
     <Header/>
     <div className="SignInContainer">
+        <div className="welcomeText">
+            <p className="welcomeTitle">Welcome to ClubHub</p>
+        </div>
         
-            <form className="SignInForm" onSubmit={handleSubmit}>
+            <form className="SignInForm" 
+            
+            onSubmit={handleSubmit}>
             <FaUserTie className="logo-main"/>
                <input type='text' 
                 id="email" 

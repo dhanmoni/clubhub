@@ -10,9 +10,9 @@ export default function Header() {
   }
   return (
     <header className="header">
-      <div onClick={handleClick} style={{display:'flex', flexDirection:'row'}}>
+      <div onClick={handleClick} style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
        <img className="header-icon" src={require("./logo.png")} alt="Logo"></img>
-        <p>ClubHouse</p>
+        <p>ClubHub</p>
       </div>
     </header>
   )

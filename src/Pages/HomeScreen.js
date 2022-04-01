@@ -1,6 +1,4 @@
 import React from 'react'
-import Modal from '../Components/Modal'
-import PostModal from '../Components/PostModal'
 import '../App.css';
 
 import Footer from '../Components/Footer';

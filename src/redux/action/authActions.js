@@ -31,6 +31,7 @@ export const registerUser = (email, password, name, dept) => async (dispatch) =>
                 }
             }
             const uid = res.user.uid
+            console.log(res.user)
             try{
                 // use setDoc to store the id of user as the documentID in firestore
                 await setDoc(doc(firestoreDB, "Users", uid), data);
@@ -69,7 +70,7 @@ export const loginUser = (email,password) => dispatch  => {
             const docRef = doc(firestoreDB, 'Users', uid)
             getDoc(docRef)
                 .then(doc => {
-                    console.log(doc)
+                    console.log(doc.data())
                     if (doc.exists()) {
                         const user_data = doc.data()
                         dispatch({

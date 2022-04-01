@@ -20,9 +20,10 @@ const PostsScreen =(props)=> {
     <div className="PostScreen">
       {
         props.post.posts.map(post=> {
+          console.log(post)
           return (
             <div className="ScreenCard">
-              <Card post = {post} key={post.id}/> 
+              <Card post={post} key={post.id}/> 
             </div>
           )
         })

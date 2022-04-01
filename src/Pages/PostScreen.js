@@ -28,11 +28,11 @@ const PostScreen = (props) => {
             <Header/>
             <div className="posts-container">         
             <form onSubmit={callAddPost}>
-                <label for="EventDescription">Event Description</label><br/><br/>
+                <label for="EventDescription" style={{fontSize: 22, fontWeight: 'bold'}}>Event Description</label><br/><br/>
                 <input type="text" 
                     id="EventDescription" 
                     name="EventDescription" 
-                    placeholder="Enter event description" 
+                    placeholder="Type something here..." 
                     value={description}
                     onChange={(e)=>setDescription(e.target.value)}/><br/><br/>
                 <input className='form-submit-button' type="submit" value="Submit"/>
