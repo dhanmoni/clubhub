@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# CLubHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An open source software for students and colleges to view and manage clubs and posts
 
-## Available Scripts
+## Website
 
-In the project directory, you can run:
+[ClubHub](https://clubhub-c03ac.web.app/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the repo and install the dependencies:
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It will install the required dependencies.
 
-### `npm run build`
+Create a firebaseKeys.js file in the src/Firebase directory.
+put your firebase keys inside the file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the app on localhost, go to the root directory and run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+> npm start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## About the project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CLubHub is a social networking site made for colleges where their clubs will be able to post events and notifications and the students will be able to view all of them inone single place.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project was created using React.js and Redux on the frontend and Firebase as the backend.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Landing Page
 
-## Learn More
+![landing](https://res.cloudinary.com/dmn19/image/upload/v1648796181/screencapture-clubhub-c03ac-web-app-2022-04-01-12_19_17.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Home Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![account](https://res.cloudinary.com/dmn19/image/upload/v1648796182/screencapture-clubhub-c03ac-web-app-home-2022-04-01-12_18_57.png)
 
-### Code Splitting
+### Post Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Home](https://res.cloudinary.com/dmn19/image/upload/v1648796183/screencapture-clubhub-c03ac-web-app-post-2022-04-01-12_19_41.png)
 
-### Analyzing the Bundle Size
+### Here is a list of features that we are providing:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. User can register with their email address
+2. Once registered, user will be redirected to home page where user can view all the posts that are posted in the college clubs
+3. User can be an admin of a club, so if the registered user is an admin then he/she will be able to make posts to that specific club.
+4. There are three types of role for the user: member, club_admin and super_admin.
+5. Member users can only view posts and they cannot make any post nor access the protected routes
+6. CLub Admin can make posts to the club of which he/she is the admin
+7. Super admin can create clubs, assign admins, manage posts etc
 
-### Making a Progressive Web App
+## Future plans
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+We could not implement all the features that we're planning to, but we'll add them after this event. Some of the features that we are going to be implementing are:
 
-### Advanced Configuration
+- Admin panel to control everything
+- Like and comment on posts
+- Complete the different screens such as: setting, active and inactive clubs etc
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Appreciation
 
-### Deployment
+Our team would like to thank AEC Coding club for organizing this amazing hackathon. It was really exciting to be a part of it
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
