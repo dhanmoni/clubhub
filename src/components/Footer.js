@@ -1,5 +1,6 @@
 import React from 'react';
 import { FcDislike } from "react-icons/fc";
+import '../styles/footer.css'
 
 const Footer = () => {
     return (

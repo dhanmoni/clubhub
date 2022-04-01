@@ -1,22 +1,53 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {logout} from '../redux/action/authActions'
+import {useNavigate} from 'react-router-dom'
+import {FaUserTie} from 'react-icons/fa'
+import {MdGroupOff,MdGroup,MdPostAdd, MdLogout } from 'react-icons/md'
+import {FaUserCog} from 'react-icons/fa'
+import '../styles/navigation.css'
 
+function NavigationPanel(props) {
+  let navigate = useNavigate();
+  function handleClick() {
+    navigate('/post')
+  }
+  const callLogout = ()=> {
+    props.logout()
+  }
 
-export default function NavigationPanel(props) {
-    const admin=false;
+  const user = props.auth.user
   return (
     <div className="navigation-panel">
-    
-    <img  className="logo-main" src={require("../assets/profile-picture.jpg")} alt="user Profile Picture"></img> {/*Replace with props.ProfilePictureUrl */}
-    
-    <h3>John Doe</h3> {/*Replace with props.Name */}
-    <p>Web developer by heart </p> {/*Replace with props.Description */}
+    <FaUserTie className="logo-main"/>
+    <div className="user-details">
+      <h2>{user.name}</h2>
+      {user.roles.club_admin && (<h2>Admin: {user.managingClub}</h2>)}
+      <h3>Dept: {user.dept}</h3>
+    </div>
     <div className="navigation-buttons">
-    <div className="navigation-panel-button">Interested Groups <img className="icons" src={require("../assets/group.PNG")}/></div>
-     <div className="navigation-panel-button">View All Groups <img className="icons" src={require("../assets/group_all.png")}/></div>
-     <div className="navigation-panel-button">Account Settings  <img className="icons" src={require("../assets/settings.png")}/></div>
-     {admin? <div className="navigation-panel-button">Account Settings  <img className="icons" src={require("../assets/settings.png")}/></div>: <div></div>}
+    <div className="navigation-panel-button">Interested Groups <MdGroup className="icons" color="#fff"/></div>
+    <div className="navigation-panel-button">View All Groups <MdGroupOff className="icons" color="#fff"/></div>
+    <div className="navigation-panel-button">Account Settings  <FaUserCog className="icons" color="#fff"/></div>
+    {user.roles.club_admin && (<div className="navigation-panel-button" onClick={handleClick}>Post Event <MdPostAdd className="icons" color="#fff"/></div>)}
+    <div className="navigation-panel-button" onClick={callLogout}>Logout <MdLogout className="icons" color="#fff"/></div>
     </div>
      
     </div>
   )
 }
+
+
+const mapStateToProps = (state) => {
+  return {
+    auth: state.auth
+  }
+};
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+      logout
+  }, dispatch)
+);
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationPanel)
