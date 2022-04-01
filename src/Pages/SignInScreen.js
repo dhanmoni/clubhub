@@ -88,6 +88,12 @@ const SignIn = (props)=> {
                         <p onClick={() => setNewUser(true)} style={{color:'blue', textDecoration:'underline'}}>New user? Register</p>
 
                     )
+                }{
+                    props.auth.loading && (
+                        <div>
+                            <p>Loading... Please wait</p>
+                        </div>
+                    )
                 }
             </form>
         {
