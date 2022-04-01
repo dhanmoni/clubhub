@@ -7,7 +7,7 @@ import {
 
 import { firestoreDB} from '../../Firebase/firebaseConfig'
 
-import { addDoc, collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import { addDoc, collection, getDocs, getFirestore, query, where, orderBy, Timestamp } from 'firebase/firestore'
 
 export const getAllPosts = () => dispatch  => {
     console.log("get post called!!")
@@ -16,7 +16,7 @@ export const getAllPosts = () => dispatch  => {
     const colRef = collection(firestoreDB, 'Posts')
 
     let posts = []
-    getDocs(colRef)
+    getDocs(colRef,  orderBy('timestamp', 'asc'))
         .then(snapshot => {
             snapshot.docs.forEach(doc=> {
                 posts.push({...doc.data(), id: doc.id})

@@ -21,6 +21,7 @@ const PostScreen = (props) => {
             author: props.auth.user.id,
             club: 'AEC Coding Club'
         })
+        setDescription("")
     }
     return (
         <div>
